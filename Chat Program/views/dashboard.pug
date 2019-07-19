@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to your dashborad
+  button(type="button" onclick="myclick()") CHAT
+
+
+  p 
+    a(href='/logout') Log out
+
+  h2 User Info
+  
+  include inc.pug
+
+  ul
+    each val in user
+        li= val
